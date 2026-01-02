@@ -129,25 +129,109 @@
             text-align: center;
         }
 
+        h1.section-title {
+            font-size: 2.25rem;
+        }
+
         /* About Section */
-        .about-content {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
+        #about {
+            padding: 64px 2rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        #about .section-title {
+            margin-bottom: 24px;
+        }
+
+        .about-subsection {
+            margin-bottom: 2rem;
+        }
+
+        .about-subsection h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            text-align: center;
         }
 
         .about-text {
-            flex: 1;
-            min-width: 300px;
-            max-width: 600px;
+            text-align: left;
         }
 
         .about-text p {
             color: var(--gray);
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
             font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-divider {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 2.5rem 0;
+        }
+
+        .founder-card {
+            background: #F6F8FB;
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .founder-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .founder-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .founder-info h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .founder-info .title {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .founder-info .title + .title {
+            margin-top: -12px;
+        }
+
+        .founder-info p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .founder-cta {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .founder-cta:hover {
+            color: var(--primary);
+            text-decoration: underline;
         }
 
         /* Services Section */
@@ -290,6 +374,26 @@
             section {
                 padding: 3rem 1.5rem;
             }
+
+            #about {
+                padding: 40px 1.5rem;
+            }
+
+            .founder-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 24px;
+            }
+
+            .founder-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .founder-info {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -314,11 +418,29 @@
     </section>
 
     <section id="about">
-        <h2 class="section-title">About</h2>
-        <div class="about-content">
+        <h1 class="section-title">About</h1>
+
+        <div class="about-subsection">
+            <h2>Yinnovest</h2>
             <div class="about-text">
                 <p>Yinnovest is a founder-led boutique investment and advisory firm founded by Alexander Yin, backing and building ambitious companies with global potential.</p>
                 <p>Combining strategic insight with hands-on execution, Yinnovest partners with exceptional teams to scale businesses, sharpen operations, and compound long-term value.</p>
+            </div>
+        </div>
+
+        <hr class="about-divider">
+
+        <div class="about-subsection">
+            <h2>Founder</h2>
+            <div class="founder-card">
+                <img src="assets/images/alexander-yin.jpg" alt="Alexander Yin" class="founder-photo">
+                <div class="founder-info">
+                    <h3>Alexander Yin</h3>
+                    <p class="title">Founder & Principal</p>
+                    <p class="title">(known as Alex)</p>
+                    <p>Alexander is a technology entrepreneur and investor with deep experience in building and scaling businesses. Through Yinnovest, he partners closely with a select group of companies to drive disciplined growth, operational excellence, and long-term value creation.</p>
+                    <a href="mailto:alexander.yin@yinnovest.com" class="founder-cta">Get in touch →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -361,7 +483,7 @@
         <div class="contact-inner">
             <h2 class="section-title">Get in Touch</h2>
             <p>Interested in learning more about Yinnovest or exploring partnership opportunities?</p>
-            <a href="mailto:contact@yinnovest.com" class="contact-email">contact@yinnovest.com</a>
+            <a href="mailto:alexander.yin@yinnovest.com" class="contact-email">alexander.yin@yinnovest.com</a>
         </div>
     </div>
 
