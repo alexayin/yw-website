@@ -334,6 +334,57 @@
             color: var(--gray);
         }
 
+        .portfolio-card .portfolio-status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-card .portfolio-status.active {
+            background: #e6f4ea;
+            color: #1e7e34;
+        }
+
+        .portfolio-card .portfolio-status.past {
+            background: #e2e8f0;
+            color: #64748b;
+        }
+
+        .portfolio-card .portfolio-investors {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        .portfolio-card .portfolio-investors span {
+            color: var(--gray);
+        }
+
+        .portfolio-card .portfolio-investors a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .portfolio-card .portfolio-investors a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .portfolio-card .investor-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-card .investor-item:last-child {
+            margin-bottom: 0;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--primary);
@@ -481,14 +532,32 @@
     <section id="portfolio">
         <h2 class="section-title">Portfolio Companies</h2>
         <div class="portfolio-grid">
-            <a href="https://www.eficode.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
-                <h3>Eficode</h3>
+            <div class="portfolio-card">
+                <span class="portfolio-status active">Active Portfolio</span>
+                <h3><a href="https://www.eficode.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Eficode</a></h3>
                 <p>A DevOps and software development company helping organizations accelerate their digital transformation journey.</p>
-            </a>
-            <a href="https://www.epassi.com" target="_blank" rel="noopener noreferrer" class="portfolio-card">
-                <h3>Epassi</h3>
+                <div class="portfolio-investors">
+                    <div class="investor-item"><span>Investor: </span><a href="https://bocap.fi" target="_blank" rel="noopener noreferrer">Bocap PE</a> <span>2019</span></div>
+                    <div class="investor-item"><span>Investor: </span><a href="https://www.investcorp.com" target="_blank" rel="noopener noreferrer">Investcorp</a> <span>2023</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <span class="portfolio-status active">Active Portfolio</span>
+                <h3><a href="https://www.epassi.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Epassi</a></h3>
                 <p>A leading employee benefits platform enabling companies to offer flexible benefits solutions to their workforce.</p>
-            </a>
+                <div class="portfolio-investors">
+                    <div class="investor-item"><span>Investor: </span><a href="https://www.bregalmilestone.com" target="_blank" rel="noopener noreferrer">Bregal Milestone</a> <span>2019</span></div>
+                    <div class="investor-item"><span>Investor: </span><a href="https://www.ta.com" target="_blank" rel="noopener noreferrer">TA Associates</a> <span>& </span><a href="https://www.warburgpincus.com" target="_blank" rel="noopener noreferrer">Warburg Pincus</a> <span>2023</span></div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <span class="portfolio-status past">Past Portfolio</span>
+                <h3><a href="https://www.perforce.com/products/helix-teamhub" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Deveo</a></h3>
+                <p>Source code repository management, version control, hosting and collaboration platform.</p>
+                <div class="portfolio-investors">
+                    <div class="investor-item"><span>Sold to: </span><a href="https://www.perforce.com" target="_blank" rel="noopener noreferrer">Perforce Software Inc.</a> <span>2017</span></div>
+                </div>
+            </div>
         </div>
     </section>
 
